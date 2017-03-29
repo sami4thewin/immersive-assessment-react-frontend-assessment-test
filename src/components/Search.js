@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Search = () => {
+const Search = ({searchTerm}) => {
   return (
     <div>
-      <input type="text" value={""} placeholder={"Search your most recent transactions"} />
+      <input type="text" value={searchTerm.searchTerm} placeholder={"Search your most recent transactions"} />
     </div>
   )
 }

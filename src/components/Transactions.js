@@ -1,7 +1,12 @@
 import React, { Component } from 'react'
+import Transaction from './Transaction'
 
 
 class Transactions extends Component {
+
+  constructor(props) {
+    super(props);
+  }
 
   render() {
 
@@ -14,8 +19,8 @@ class Transactions extends Component {
           <th>Category</th>
           <th>Amount</th>
         </tr>
-        {"...your code here "}
       </tbody>
+      {this.props.transactions.map(transaction => <Transaction transaction={transaction} /> )}
     </table>
     )
   }
